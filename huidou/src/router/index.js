@@ -5,6 +5,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 import Home from '@/components/Home'
 import Jifen from '@/components/Jifen'
 import huo from '@/components/huo'
+
 Vue.use(Router)
 Vue.use(VueAwesomeSwiper)
 export default new Router({

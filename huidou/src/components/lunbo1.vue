@@ -7,29 +7,22 @@
 	    <div class="swiper-pagination" slot="pagination"></div>
 
     </swiper>  
-    <div class="support">
-        <ul>
-            <li v-for='b in list2' @click="jin">
-                <img :src="b.src1" alt="">
-                <p>{{b.text}}</p>
-            </li>
-        </ul>
-    </div>
+    
   </div>
 </template>
 
 <script>
 import { swiper } from 'vue-awesome-swiper'
 export default {
-  name: 'lunbo',
+  name: 'lunbo1',
   data () {
     return {
     	swiperOption: {
             autoplay: 3000,
             pagination : '.swiper-pagination',
             loop : true//环路 
-        },
-        list2:[
+       },
+       list2:[
 	        {
                 src:'/static/img/18.jpg',
 	        	    src1:'/static/img/2.png',
@@ -51,18 +44,14 @@ export default {
                 text:'我的惠豆'
 	        },
         ]
-
+      
     }
   },
     components:{
     	swiper
     },
     methods:{
-    	jin(){
-//  		console.log(this.$index)
-    		this.$router.push('/huo');
-    		
-    	}
+    	
     }
 }
 </script>
@@ -71,7 +60,7 @@ export default {
 <style scoped>
 .lunbo{
 	width: 100%;
-	margin-top:44px;
+	/*margin-top:44px;*/
     position: relative;
 }
 
