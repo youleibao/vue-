@@ -28,7 +28,7 @@
 import lunbo from './lunbo'
 import leader from './leader'
 export default {
-    name: 'home',
+    name: 'Home',
     data () {
 	    return {
             list3:[

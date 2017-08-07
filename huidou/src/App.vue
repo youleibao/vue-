@@ -3,7 +3,7 @@
     <!--<img src="./assets/logo.png">-->
     <router-view></router-view>
     
-    <feet></feet>
+    <!--<feet></feet>-->
     <!--<ul class="ul1">
     	<li>
     		<router-link to='/'>
@@ -40,12 +40,10 @@
 </template>
 
 <script>
-	import feet from "@/components/feet"
+//	import feet from "@/components/feet"
 export default {
   name: 'app',
-  components:{
-  	feet,
-  }
+ 
 }
 </script>
 

@@ -1,16 +1,21 @@
 <template>
-  <ul class="feet">
-    <li v-for="(a,index) in list1" @click='imgchange(index,a)'>
-      <router-link :class="a.cla" :to='a.to'>
-        <img :src="a.src" alt="" ><span>{{a.title}}</span>      
-      </router-link>
-    </li>
-    
-  </ul>
+	 <div class="feet">
+	 	   <router-view></router-view>
+	 	   <ul class="ft">
+         	
+			    <li v-for="(a,index) in list1" @click='imgchange(index,a)'>
+			      <router-link :class="a.cla" :to='a.to'>
+			        <img :src="a.src" alt="" ><span>{{a.title}}</span>      
+			      </router-link>
+			    </li>
+			    
+			  </ul>
+	 </div>
+  
 </template>
 
 <script>
-import Vue from 'vue'
+//import Vue from 'vue'
 export default {
   name: 'feet',
   data () {
@@ -19,7 +24,7 @@ export default {
         {
           title:'首页',
           cla:'home',
-          to:'/',
+          to:'/home',
           src:'../../static/img/7.png',          
           src1:'../../static/img/12.png',          
         },
@@ -33,15 +38,15 @@ export default {
         },
         {
           title:'会员卡',
-          cla:'memberCla',
-          to:'/member',
+          cla:'huiyuan',
+          to:'/huiyuan',
           src:'../../static/img/17.png',          
           src1:'../../static/img/17.png',            
         },
         {
           title:'兑惠豆',
-          cla:'convertCla',
-          to:'/convert',
+          cla:'duihuan',
+          to:'/duihuan',
           src:'../../static/img/10.png',          
           src1:'../../static/img/24.png',            
         },
@@ -79,7 +84,7 @@ export default {
 a.router-link-active{
   color: red;
 }
-.feet{
+.ft{
   width: 100%;
   height: 49px;
   background: pink;
@@ -90,10 +95,10 @@ a.router-link-active{
   bottom: 0;
   border-top:1px solid red;
 }
-.feet li{
+.ft li{
   width: 20%;
 }
-.feet a{
+.ft a{
   text-decoration: none;
   color:#57575a;
   font-size:14px;
@@ -101,18 +106,18 @@ a.router-link-active{
   display: block;
   height: 100%;
 }
-.feet a img{
+.ft a img{
   height: 50%;
 }
 
-.feet .memberCla img{
+.ft .memberCla img{
   height: 95%;
   margin-top:-28%;
   border-top:1px solid red;
   box-sizing: border-box;
   border-radius: 50%;
 }
-.feet span{
+.ft span{
   display: block;
 }
 
